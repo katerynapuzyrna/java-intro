@@ -1,6 +1,6 @@
 package lesson02;
 
-public class system02 {
+public class Program02 {
     public static void main(String[] args) {
         //classwork part
         System.out.println("Classwork part:");
