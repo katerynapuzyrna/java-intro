@@ -13,6 +13,13 @@ public class LambdaApp {
         System.out.println(sumOf(array, exp3));
         System.out.println(sumOf(array, (int i)-> i%2!=0));//isOdd
 
+        System.out.println(sumOf(array, new Expression(){
+            @Override
+            public boolean isEqual(int i) {
+                return i>=0;
+            }
+        }));
+
     }
     private static int sumOf(int[] arr, Expression expression) {
         int result=0;
