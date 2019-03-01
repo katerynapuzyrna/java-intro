@@ -3,6 +3,8 @@ package lesson04;
 import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.Objects;
 
 public class LambdaApp {
     public static void main(String[] args) {
@@ -38,8 +40,14 @@ public class LambdaApp {
         colors.remove("Yellow");
         System.out.println("List contains 'Yellow': " + colors.contains("Yellow"));
         System.out.println("List before sorting: " +colors);
+        Iterator iter = colors.iterator();
+        while (iter.hasNext())
+            System.out.println(iter.next());
         Collections.sort(colors);
         System.out.println("List after sorting: " +colors);
+        iter = colors.iterator();
+        while (iter.hasNext())
+            System.out.println(iter.next());
 
     }
     private static int sumOf(int[] arr, Expression expression) {
