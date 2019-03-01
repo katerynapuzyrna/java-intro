@@ -1,7 +1,13 @@
 package lesson04;
 
+import javax.swing.text.html.HTMLDocument;
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class LambdaApp {
     public static void main(String[] args) {
+        //Classwork part
+        System.out.println("Classwork part:");
         int[] array = {-5, -4,-3,-2,-1,0,1,2,3,4,5};
         ExpressionUtils expressionUtils = new ExpressionUtils();
         Expression exp1 = expressionUtils::isEven;
@@ -19,6 +25,21 @@ public class LambdaApp {
                 return i>=0;
             }
         }));
+
+        //Homework part
+        System.out.println("Homework part:");
+        ArrayList<String> colors = new ArrayList<>(4);
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
+        colors.add("Yellow");
+        colors.add("Orange");
+        colors.add("Orange");
+        colors.remove("Yellow");
+        System.out.println("List contains 'Yellow': " + colors.contains("Yellow"));
+        System.out.println("List before sorting: " +colors);
+        Collections.sort(colors);
+        System.out.println("List after sorting: " +colors);
 
     }
     private static int sumOf(int[] arr, Expression expression) {
